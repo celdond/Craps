@@ -2,8 +2,8 @@ import dice as d
 
 class play_game:
 
-  def __init__(self, dice):
-    self.dice = dice
+  def __init__(self, x):
+    self.dice = x
     self.point = None
     self.bankroll = 0
 
