@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d3712b29-6af3-47ac-8c09-c5e2eed05363</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>craps.py</StartupFile>
+    <StartupFile>game.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
