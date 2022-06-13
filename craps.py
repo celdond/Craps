@@ -7,7 +7,7 @@ class play_game:
     self.point = None
     self.bankroll = 0
 
-  def first_rolls(self):
+  def first_rolls(self) -> str:
     first_roll = self.dice.roll()
     if first_roll in [2, 3]:
       return 'Loss'
@@ -19,7 +19,7 @@ class play_game:
       self.point = first_roll
       return 'Point'
 
-  def sub_rolls(self):
+  def sub_rolls(self) -> str:
     sub_roll = self.dice.roll()
     if sub_roll == self.point:
       value = 'Won'
@@ -31,7 +31,7 @@ class play_game:
       value = 'Try'
     return value
     
-def interactive_game(play_game):
+def interactive_game(play_game: play_game):
 
     print('Every chip is a dollar!')
     play_game.bankroll += int(input('How many do you want?\n'))

@@ -6,12 +6,12 @@ class die:
         self.sides = [1, 2, 3, 4, 5, 6]
         self.rolled = 0
 
-    def load_dice(self, loaded = 0, load = 1):
+    def load_dice(self, loaded = 0, load = 1) -> int:
         if loaded != 0:
             for x in range(load):
                 self.sides.append(loaded)
                 
-    def roll(self):
+    def roll(self) -> int:
         x = random.choice(self.sides)
         self.current = int(x)
         return x
@@ -35,7 +35,7 @@ class set_dice:
         for x in range(number):
             self.create_die(loaded, load)
 
-    def roll(self):
+    def roll(self) -> int:
         self.total = 0
         for x in range(self.number_of_dice):
             current_dice = self.set_of_dice[x]
