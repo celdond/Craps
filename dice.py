@@ -30,6 +30,9 @@ class set_dice:
 
         self.set_of_dice.append(a)
 
+    def display_die(self):
+        print(self.total)
+
     def add_dice(self, number = 1, loaded = 0, load = 1):
         self.number_of_dice += number
         for x in range(number):

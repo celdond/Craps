@@ -37,6 +37,7 @@ def interactive_game(play_game: play_game):
     play_game.bankroll += int(input('How many do you want?\n'))
     if play_game.bankroll == 0:
       print('Alrighty. Come back to the table when you are ready.')
+      return
 
     while True:
       x = True
@@ -51,9 +52,9 @@ def interactive_game(play_game: play_game):
         print('Remaining chips: {}\n'.format(play_game.bankroll))
         break
 
-      player_roll = input('Alright, go ahead and roll the die.\n')
+      input('Alright, go ahead and roll the die.\n')
       first_result = play_game.first_rolls()
-      # play_game.dice.display_die()
+      play_game.dice.display_die()
 
       if first_result == 'Won':
         print('Bet won!\n')
@@ -71,7 +72,7 @@ def interactive_game(play_game: play_game):
           print('Trying for {}, go ahead and roll again.'.format(play_game.point))
           input('')
           sub_result = play_game.sub_rolls()
-          # play_game.dice.display_die()
+          play_game.dice.display_die()
 
           if sub_result == 'Won':
             print('Bet won!\n')
