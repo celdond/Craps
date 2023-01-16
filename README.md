@@ -48,3 +48,7 @@ Follows the rules as expect.
 If you run out of chips, the game will end.  If you still have chips, the game will 
 keep going.
 
+## Extra Functionality
+
+Within craps.py is functionality for the game to play itself as well as statistical 
+functions to display the chances of successful bets utilizing specific methods.

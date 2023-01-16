@@ -104,7 +104,7 @@ def interactive_game(play_game: play_game):
         play_game.bankroll += bet
         print('Current bankroll: {}'.format(play_game.bankroll))
 
-      elif first_result == 'Loss':
+      elif first_result == 'Loss' or first_result == '12':
         print('Ah, bet lost.\n')
         play_game.bankroll -= bet
         print('Current bankroll: {}'.format(play_game.bankroll))
