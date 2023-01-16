@@ -34,7 +34,12 @@ class play_game:
 def interactive_game(play_game: play_game):
 
     print('Every chip is a dollar!')
-    play_game.bankroll += int(input('How many do you want?\n'))
+    try:
+      play_game.bankroll += int(input('How many do you want?\n'))
+    except:
+      print("No no, you must tell me a NUMBER.  Try again another time.\n")
+      return
+
     if play_game.bankroll == 0:
       print('Alrighty. Come back to the table when you are ready.')
       return
@@ -46,7 +51,12 @@ def interactive_game(play_game: play_game):
         print('Talk to me if you want more to keep playing.')
         break
 
-      bet = int(input('Place your bets!\n'))
+      try:
+        bet = int(input('Place your bets!\n'))
+      except:
+        print("Now that is not a number, now is it?\n")
+        continue
+      
       if bet == 0:
         print('Thanks for playing, come back anytime.')
         print('Remaining chips: {}\n'.format(play_game.bankroll))
