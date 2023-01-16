@@ -22,7 +22,7 @@ Only one such bet is accepted, for the sake of simplicity:
 
 As the program requires a terminal, the game needs a Python distribution to run.
 Only standard libraries were used on Python 3.10.7.  Simply clone the repo, and 
-run using your prefered environment.
+run using your prefered environment from game.py.
 
 ## Implementation
 
@@ -51,4 +51,6 @@ keep going.
 ## Extra Functionality
 
 Within craps.py is functionality for the game to play itself as well as statistical 
-functions to display the chances of successful bets utilizing specific methods.
+functions to display the chances of successful bets utilizing specific methods. 
+None of these are attached to the game.py main function, and will need to be set-up 
+in order to operate.
