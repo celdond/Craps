@@ -17,3 +17,11 @@ House rules ordain the kind of bets that can be made in this implementation.
 Only one such bet is accepted, for the sake of simplicity:
 - Pass Line Bet:  Made before the first roll, bets the dice will land on a 
 7 or 11 first roll, or the point on the subsequent rolls.
+
+## How to Run
+
+As the program requires a terminal, the game needs a Python distribution to run.
+Only standard libraries were used on Python 3.10.7.  Simply clone the repo, and 
+run using your prefered environment.
+
+## Implementation
