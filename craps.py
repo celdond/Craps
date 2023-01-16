@@ -30,6 +30,39 @@ class play_game:
     else:
       value = 'Try'
     return value
+
+  #This function uses the above two functions until full play is over
+  def non_interactive(self):
+    first = self.first_rolls()
+    if first in ['Loss', '12', 'Won']:
+      return first
+    else:
+      while True:
+        sub = self.sub_rolls()
+        if sub in ['Loss', 'Won']:
+          break
+      return sub
+
+  #Only for probability of winning a pass bet
+  def monte_carlo_pass(self):
+    number_wins = 0
+    for x in range(1000000):
+      i = self.non_interactive()
+      if i == 'Won':
+        number_wins += 1
+    return float(number_wins/1000000)
+  
+  #Only for probability of winning a no pass bet
+  def monte_carlo_no_pass(self):
+    number_losses = 0
+    number_wins = 0
+    for x in range(1000000):
+      i = self.non_interactive()
+      if i == 'Loss':
+        number_losses += 1
+      elif i == 'Won':
+        number_wins += 1
+    return float(number_losses/(number_losses + number_wins))
     
 def interactive_game(play_game: play_game):
 
